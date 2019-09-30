@@ -1,0 +1,12 @@
+/*
+ 
+*/
+#include <stdio.h>
+
+string mot;
+
+void main ()
+{
+	extern string mot;
+	scanf(%s,mot);
+}
