@@ -26,13 +26,37 @@ int main ()
 			scanf("%d", &m2[range][colonne]);
 		}
 	}
-	printf("\n");
-	for (int range=0; range<dimention; range++)
+	printf("_______________________________________________________\n");
+	for (int colonne=0; colonne<dimention; colonne++)
 	{
-		for (int colonne=0; colonne<dimention;colonne++)
+		for (int range=0; range<dimention;range++)
 		{
-			m3[range][colonne]=m1[range][colonne]+m2[range][colonne];	
-			printf("    %d", 	m3[range][colonne]);
+			printf("    %d", m1[colonne][range]);
+		}
+		printf("\n");
+	}
+	
+	printf("_______________________________________________________\n");
+	for (int colonne=0; colonne<dimention; colonne++)
+	{
+		for (int range=0; range<dimention;range++)
+		{
+			printf("    %d", m2[colonne][range]);
+		}
+		printf("\n");
+	}
+	
+	printf("_______________________________________________________\n");
+	for (int colonne=0; colonne<dimention; colonne++)
+	{
+		for (int range=0; range<dimention;range++)
+		{
+			m3[colonne][range]=0;
+			for (int i=0; i<dimention; i++)
+			{
+				m3[colonne][range]+=m1[i][range]*m2[colonne][i];
+			}
+			printf("    %d", m3[colonne][range]);
 		}
 		printf("\n");
 	}
