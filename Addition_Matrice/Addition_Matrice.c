@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void afficherM(int dimention, int matrice[dimention][dimention]);
+
 int main ()
 {
 	int dimention;
@@ -26,16 +28,27 @@ int main ()
 			scanf("%d", &m2[range][colonne]);
 		}
 	}
-	printf("\n");
 	for (int range=0; range<dimention; range++)
 	{
 		for (int colonne=0; colonne<dimention;colonne++)
 		{
-			m3[range][colonne]=m1[range][colonne]+m2[range][colonne];	
-			printf("    %d", 	m3[range][colonne]);
+			m3[range][colonne]=m1[range][colonne]+m2[range][colonne];
+		}
+	}
+	afficherM(dimention,m1);
+	afficherM(dimention,m2);
+	afficherM(dimention,m3);
+	return 0;  
+}
+void afficherM(int dimention,int matrice[dimention][dimention])
+{
+	printf("_______________________________________________________\n");
+	for (int ranger=0; ranger<dimention; ranger++)
+	{
+		for (int colonne=0; colonne<dimention;colonne++)
+		{
+			printf("    %d", matrice[ranger][colonne]);
 		}
 		printf("\n");
 	}
-	
-	return 0;  
 }
