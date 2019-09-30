@@ -11,11 +11,10 @@ int main ()
 	do
 	{
 		lettre=mot[i];
-		printf("\n%c",lettre);
+		//printf("\n%c",lettre);
 		i++;
 	}while(i<=19 && lettre !='\0');
 	i=i-2;
-	
 	int palyndrome=1;
 	for (int j=0; j<=i && palyndrome==1; j++)
 	{

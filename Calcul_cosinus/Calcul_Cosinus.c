@@ -40,7 +40,7 @@ float somation (float x)
 			resultat += (exposant(x,i)/factoriel(i))*exposant(-1,j);
 		}
 		j++;
-		printf("\ntest1 : %f ",resultat);
+		//printf("\ntest1 : %f ",resultat);
 	}
 	return resultat;
 }
@@ -58,7 +58,7 @@ float exposant ( float x, int i)
 			resultat*=x;
 		}
 	}
-	printf("\ntest2 : %f ",resultat);
+	//printf("\ntest2 : %f ",resultat);
 	return resultat;
 }
 
