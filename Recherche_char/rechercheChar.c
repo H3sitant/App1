@@ -24,6 +24,7 @@ void recherche_position (char *mot,char lettre)
 	do
 	{
 		lettre_tampon= mot[i];
+		printf("\n%c comparee avec la %d ieme lettre soit : %c\n",lettre , i, lettre_tampon);
 		i++;
 	}
 	while(lettre_tampon != '\0' && lettre_tampon != lettre);
