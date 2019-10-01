@@ -1,55 +1,55 @@
 #include <stdio.h>
 
-void afficherM(int dimention, int matrice[dimention][dimention]);
+void afficherM(int dimension, int matrice[dimension][dimension]);
 int main ()
 {
-	int dimention;
-	printf("Quel est la dimention des matrices :\n");
-	scanf("%d", &dimention);
+	int dimension;
+	printf("Quel est la dimension des matrices :\n");
+	scanf("%d", &dimension);
 	
-	int m1[dimention][dimention];
-	int m2[dimention][dimention];
-	int m3[dimention][dimention];
+	int m1[dimension][dimension];
+	int m2[dimension][dimension];
+	int m3[dimension][dimension];
 	
-	for (int range=0; range<dimention; range++)
+	for (int range=0; range<dimension; range++)
 	{		
-		for (int colonne=0; colonne<dimention;colonne++)
+		for (int colonne=0; colonne<dimension;colonne++)
 		{
 			printf("\nValeur de la matrice 1 a la position: %d,%d\n", range+1, colonne+1);
 			scanf("%d", &m1[range][colonne]);
 		}
 	}
-	for (int range=0; range<dimention; range++)
+	for (int range=0; range<dimension; range++)
 	{		
-		for (int colonne=0; colonne<dimention;colonne++)
+		for (int colonne=0; colonne<dimension;colonne++)
 		{
 			printf("\nValeur de la matrice 2 a la position: %d,%d\n", range+1, colonne+1);
 			scanf("%d", &m2[range][colonne]);
 		}
 	}
-	afficherM(dimention,m1);
-	afficherM(dimention,m2);
-	for (int ranger=0; ranger<dimention; ranger++)
+	afficherM(dimension,m1);
+	afficherM(dimension,m2);
+	for (int ranger=0; ranger<dimension; ranger++)
 	{
-		for (int colonne=0; colonne<dimention;colonne++)
+		for (int colonne=0; colonne<dimension;colonne++)
 		{
 			m3[ranger][colonne]=0;
-			for (int i=0; i<dimention; i++)
+			for (int i=0; i<dimension; i++)
 			{
 				m3[ranger][colonne]+=m1[ranger][i]*m2[i][colonne];
 			}
 		}
 	}
-	afficherM(dimention,m3);
+	afficherM(dimension,m3);
 	
 	return 0;  
 }
-void afficherM(int dimention,int matrice[dimention][dimention])
+void afficherM(int dimension,int matrice[dimension][dimension])
 {
 	printf("_______________________________________________________\n");
-	for (int ranger=0; ranger<dimention; ranger++)
+	for (int ranger=0; ranger<dimension; ranger++)
 	{
-		for (int colonne=0; colonne<dimention;colonne++)
+		for (int colonne=0; colonne<dimension;colonne++)
 		{
 			printf("    %d", matrice[ranger][colonne]);
 		}
