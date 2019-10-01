@@ -1,6 +1,23 @@
-#include <stdio.h>
+/* Isack Breton 
+ * CIP: brei0501
+ * S1 GI Université de Sherbrooke
+ * 
+ * Hugo Binet 
+ * CIP: binh2801
+ * S1 GE Université de Sherbrooke
+ * 
+ * APP 2: Librairie de fonctionnalités
+ * Introduction à la programmation et aux algorithmes
+ * 
+ * Présenté à Charles-Antoine Brunet, Roch Lefebvre, Domingo Palao Munoz et Jonathan Vincent
+ * 
+ * Sherbrooke – 02 octobre 20
+ * 
+ * Calcul de sinus à l'aide de série
+ */
+ #include <stdio.h>
 
-float somation(float x);
+float sinus(float x);
 float exposant(float x, int i);
 float factoriel(int i); 
 #define PI 3.1415926535
@@ -22,7 +39,7 @@ int main ()
 		}
 	}
 	printf("\nLa valeur de x simplifier est : %f", x);
-	printf("\nLe sinus est de : %f\n", somation(x)); 
+	printf("\nLe sinus est de : %f\n", sinus(x)); 
 	/*printf("\nLe sinus de 1 est de : %f\n", somation(1)); 
 	printf("\nLe sinus de 0 est de : %f\n", somation(0)); 
 	printf("\nLe sinus de PI/4 est de : %f\n", somation(PI/4)); 
@@ -30,7 +47,7 @@ int main ()
 	return 0;
 }
 
-float somation (float x)
+float sinus (float x)
 {
 	float resultat=0;
 	int j = 0;

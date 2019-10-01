@@ -1,4 +1,21 @@
-#include <stdio.h>
+/* Isack Breton 
+ * CIP: brei0501
+ * S1 GI Université de Sherbrooke
+ * 
+ * Hugo Binet 
+ * CIP: binh2801
+ * S1 GE Université de Sherbrooke
+ * 
+ * APP 2: Librairie de fonctionnalités
+ * Introduction à la programmation et aux algorithmes
+ * 
+ * Présenté à Charles-Antoine Brunet, Roch Lefebvre, Domingo Palao Munoz et Jonathan Vincent
+ * 
+ * Sherbrooke – 02 octobre 20
+ * 
+ * Vérification de palindrome
+ */
+ #include <stdio.h>
 
 char mot[20];
 char lettre;
